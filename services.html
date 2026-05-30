@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Nazmul Alam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Playball&display=swap" rel="stylesheet">
+<style>
+/* HEADER */
+
+.site-header{
+    width:100%;
+    height:72px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 40px;
+
+    background:linear-gradient(
+    90deg,
+    #5878ff 0%,
+    #6b6ffb 50%,
+    #7d5df7 100%
+    );
+
+    position:sticky;
+    top:0;
+    z-index:9999;
+}
+
+/* LOGO */
+
+.header-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.header-logo img{
+    width:42px;
+    height:42px;
+    object-fit:contain;
+}
+
+.header-logo span{
+    color:#111;
+    font-size:28px;
+    font-weight:800;
+}
+
+/* MENU */
+
+.header-menu{
+    display:flex;
+    align-items:center;
+    gap:42px;
+}
+
+.header-menu a{
+    text-decoration:none;
+    color:rgba(0,0,0,0.65);
+
+    font-size:16px;
+    font-weight:500;
+
+    transition:.3s;
+}
+
+.header-menu a:hover{
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+/* BUTTON */
+
+.call-btn{
+    background:#000;
+
+    color:#fff;
+    text-decoration:none;
+
+    padding:14px 30px;
+
+    border-radius:50px;
+
+    font-size:15px;
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.call-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+/* DEMO CONTENT */
+
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.site-header{
+    flex-wrap:wrap;
+    height:auto;
+    padding:18px;
+    gap:20px;
+}
+
+.header-logo{
+    width:100%;
+    justify-content:center;
+}
+
+.header-menu{
+    width:100%;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+.call-btn{
+    margin:auto;
+}
+
+.header-logo span{
+    font-size:24px;
+}
+
+}
+
+@media(max-width:600px){
+
+.header-menu{
+    gap:12px;
+}
+
+.header-menu a{
+    font-size:14px;
+}
+
+.call-btn{
+    padding:12px 22px;
+}
+
+.header-logo img{
+    width:34px;
+    height:34px;
+}
+
+.header-logo span{
+    font-size:20px;
+}
+
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Inter Tight",sans-serif;
+  background:#08031f;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* ================= SERVICES PAGE ================= */
+
+.services-page{
+  width:100%;
+  min-height:100vh;
+  padding:70px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(124,58,237,0.22), transparent 34%),
+    radial-gradient(circle at 85% 80%, rgba(79,70,229,0.18), transparent 36%),
+    #08031f;
+}
+
+
+/* ================= TOP CONTENT ================= */
+
+.services-top{
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:40px;
+  align-items:center;
+  margin-bottom:58px;
+}
+
+.services-title-wrap{
+  display:flex;
+  flex-direction:column;
+  gap:26px;
+}
+
+.services-title{
+  font-size:clamp(58px,9vw,127px);
+  line-height:0.78;
+  font-weight:800;
+  letter-spacing:-0.04em;
+  text-transform:uppercase;
+  color:#ffffff;
+  animation:fadeDown 0.9s ease forwards;
+}
+
+.services-desc{
+  max-width:680px;
+  font-size:clamp(18px,2vw,23px);
+  line-height:1.35;
+  font-weight:500;
+  color:#bdadad;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  animation:fadeUp 0.9s ease forwards 0.25s;
+  opacity:0;
+}
+
+.services-action{
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+  align-items:center;
+  justify-content:center;
+  animation:fadeRight 0.9s ease forwards 0.45s;
+  opacity:0;
+}
+
+.consult-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:240px;
+  height:58px;
+  padding:0 28px;
+  border-radius:50px;
+  background:linear-gradient(135deg,#7C3AED,#4F46E5);
+  color:#fff;
+  font-size:16px;
+  font-weight:500;
+  border:1px solid #ffffff;
+  box-shadow:0 14px 30px rgba(0,0,0,0.45);
+  transition:0.3s ease;
+}
+
+.consult-btn:hover{
+  transform:translateY(-6px) scale(1.03);
+  box-shadow:0 22px 40px rgba(0,0,0,0.48);
+}
+
+/* ================= FOLLOW ME SECTION ================= */
+
+.service-social{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.service-arrow{
+  width:72px;
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transform:rotate(25deg);
+  
+}
+
+.service-arrow img{
+  width:125px;
+  height:125px;
+  object-fit:contain;
+
+  filter: brightness(0) invert(1);
+}
+
+.follow-text{
+  font-size:28px;
+  color:#ffffff;
+  font-weight:800;
+  margin-left:20px;
+  margin-top:20px;
+}
+
+.service-icons{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.social-icon{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  transition:0.3s ease;
+  margin-top:20px;
+}
+
+.social-icon:hover{
+  transform:translateY(-5px);
+  
+}
+
+.social-icon img{
+  width:60px;
+  height:60px;
+  object-fit:contain;
+}
+
+/* ================= SERVICE CARDS ================= */
+
+.services-card-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  align-items:stretch;
+}
+
+.service-box{
+  min-height:300px;
+  padding:24px 22px;
+  border-radius:26px;
+  border:1px solid rgba(148,148,148,0.85);
+  background:#fff;
+  box-shadow:
+    0 18px 45px rgba(70,10,224,0.30),
+    inset 0 1px 0 rgba(255,255,255,0.85);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+  text-align:center;
+  transition:0.35s ease;
+  opacity:0;
+  
+}
+
+.service-box.animation-done{
+  transform:translateY(0);
+}
+
+.service-box.animation-done:hover{
+  transform:translateY(-8px);
+  box-shadow:
+    0 30px 70px rgba(255, 255, 255, 0.246),
+    0 0 35px rgba(153, 153, 153, 0.245);
+}
+
+.service-box:nth-child(1){
+  animation:cardFromLeft 0.9s ease forwards 0.55s;
+}
+
+.service-box:nth-child(2){
+  animation:cardFromBottom 0.9s ease forwards 0.75s;
+}
+
+.service-box:nth-child(3){
+  animation:cardFromRight 0.9s ease forwards 0.95s;
+}
+
+/* ================= FINAL SAFE CENTER FIX ================= */
+
+.service-box > div{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.service-icon-wrap{
+  width:92px;
+  height:92px;
+  border-radius:24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 22px;
+}
+
+.icon-style-1{
+  background:
+    radial-gradient(30% 30% at 50% 50%,rgba(255,160,26,0.25),rgba(255,255,255,0) 100%),
+    #fff;
+}
+
+.icon-style-2{
+  background:
+    radial-gradient(30% 30% at 50% 50%,rgba(255,81,0,0.25),rgba(255,255,255,0) 100%),
+    #fff;
+}
+
+.icon-style-3{
+  background:
+    radial-gradient(30% 30% at 50% 50%,rgba(0,196,43,0.25),rgba(255,255,255,0) 100%),
+    #fff;
+}
+
+.service-icon{
+  width:120px;
+  height:120px;
+  border-radius:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:inset 0 4px 4px rgba(255,255,255,0.25);
+  overflow:hidden;
+}
+
+
+
+/* Custom card icon image */
+.service-icon img{
+  width:120px;
+  height:120px;
+  object-fit:contain;
+  display:block;
+  
+}
+
+.service-box h3{
+  font-size:23px;
+  line-height:1.2;
+  font-weight:800;
+  color:#000;
+  margin-bottom:28px;
+}
+
+.know-more{
+  min-width:150px;
+  height:48px;
+  border-radius:50px;
+  border:1px solid #000;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  color:#000;
+  font-size:16px;
+  font-weight:800;
+  transition:0.3s ease;
+}
+
+.know-more:hover{
+  background:#000;
+  color:#fff;
+  transform:translateY(-4px);
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-70px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(70px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes fadeRight{
+  from{opacity:0;transform:translateX(80px);}
+  to{opacity:1;transform:translateX(0);}
+}
+
+@keyframes cardFromLeft{
+  from{opacity:0;transform:translateX(-100px);}
+  to{opacity:1;transform:translateX(0);}
+}
+
+@keyframes cardFromRight{
+  from{opacity:0;transform:translateX(100px);}
+  to{opacity:1;transform:translateX(0);}
+}
+
+@keyframes cardFromBottom{
+  from{opacity:0;transform:translateY(90px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1024px){
+  .services-container{
+    padding:42px 32px;
+  }
+
+  .services-top{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .services-title-wrap{
+    align-items:center;
+  }
+
+  .services-desc{
+    max-width:760px;
+  }
+
+  .services-card-grid{
+    grid-template-columns:1fr;
+    max-width:620px;
+    margin:0 auto;
+  }
+
+  .service-box:nth-child(1),
+  .service-box:nth-child(2),
+  .service-box:nth-child(3){
+    }
+}
+
+@media(max-width:640px){
+  .services-page{
+    padding:34px 16px;
+  }
+
+  .services-container{
+    padding:34px 20px;
+    border-radius:26px;
+  }
+
+  .services-title{
+    font-size:61px;
+    line-height:0.9;
+  }
+
+  .services-desc{
+    font-size:18px;
+  }
+
+  .service-social{
+    flex-direction:column;
+  }
+
+  .service-arrow{
+    width:58px;
+    height:58px;
+  }
+
+  .service-arrow img{
+    width:58px;
+    height:58px;
+  }
+
+  .follow-text{
+    font-size:20px;
+  }
+
+  .service-box{
+    min-height:270px;
+    padding:22px 18px;
+    transform:none;
+  }
+
+  .service-box h3{
+    font-size:21px;
+  }
+
+  .consult-btn{
+    width:100%;
+    max-width:280px;
+  }
+}
+
+@media(max-width:420px){
+  .services-title{
+    font-size:52px;
+  }
+
+  .services-desc{
+    font-size:17px;
+  }
+
+  .service-box h3{
+    font-size:19px;
+  }
+}
+
+
+.footer-section{
+  width:100%;
+}
+
+.footer-container{
+  max-width:1120px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 2fr 1fr;
+  gap:25px;
+}
+
+.footer-card{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:24px;
+  padding:28px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+.footer-card h3{
+  font-size:24px;
+  font-weight:600;
+  color:#fff;
+  margin-bottom:24px;
+}
+
+/* Social */
+
+.footer-social{
+  display:flex;
+  gap:12px;
+}
+
+.footer-social a{
+  width:52px;
+  height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,0.15);
+  transition:.3s;
+}
+
+.footer-social a:hover{
+  transform:translateY(-5px);
+}
+
+.footer-social img{
+  width:30px;
+  height:30px;
+  object-fit:contain;
+}
+
+/* Menu */
+
+.footer-menu{
+  display:flex;
+  justify-content:space-between;
+}
+
+.footer-links{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.footer-links a{
+  color:#d7d7d7;
+  font-size:15px;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.footer-links a:hover{
+  color:#fff;
+}
+
+/* Copyright */
+
+.footer-copyright{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.footer-copyright h3{
+  margin:0;
+  line-height:1.4;
+}
+
+@media(max-width:768px){
+
+  .footer-container{
+    grid-template-columns:1fr;
+  }
+
+  .footer-menu{
+    flex-direction:column;
+    gap:25px;
+  }
+
+}
+
+/* ================= FINAL GITHUB PACKAGE GLOBAL FIXES ================= */
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;overflow-x:hidden;}
+section{scroll-margin-top:95px;}
+@media(max-width:900px){section{scroll-margin-top:165px;}}
+
+/* Force all website buttons to 40px radius */
+a[class*="btn"],
+button,
+.submit-btn,
+.call-btn,
+.read-more,
+.know-more,
+.consult-btn,
+.about-btn,
+.hire-btn,
+.services-btn,
+.contact-btn,
+.hero-btn,
+.cta-btn{
+  border-radius:40px !important;
+}
+
+/* Safe button hover: no vibration */
+a[class*="btn"]:hover,
+button:hover,
+.submit-btn:hover,
+.call-btn:hover,
+.read-more:hover,
+.know-more:hover,
+.consult-btn:hover,
+.about-btn:hover,
+.hire-btn:hover,
+.services-btn:hover,
+.contact-btn:hover,
+.hero-btn:hover,
+.cta-btn:hover{
+  transition:background .3s ease,color .3s ease,box-shadow .3s ease,transform .3s ease;
+}
+
+/* Footer should attach naturally after page content */
+.footer-section{
+  background:#050522;
+}
+
+/* Blog details standalone */
+.blog-page{
+  display:block !important;
+}
+.main-content.hidden{
+  display:block !important;
+}
+
+</style>
+</head>
+<body>
+<header class="site-header">
+
+    <div class="header-logo">
+        <img src="./images/logo.png" alt="Logo">
+        <span>Nazmul</span>
+    </div>
+
+    <nav class="header-menu">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="tel:+8801922615513" class="call-btn">
+        Call Me
+    </a>
+
+</header>
+
+<section class="services-page">
+
+  <div class="services-container">
+
+    <div class="services-top">
+
+      <div class="services-title-wrap">
+
+        <h1 class="services-title">Services</h1>
+
+        <div class="services-desc">
+          <p>I help businesses automate repetitive tasks, improve productivity, and save time using modern AI tools and workflow automation systems.</p>
+          <p>From AI chatbots to automated business workflows, I create smart solutions that reduce manual work and help businesses grow faster.</p>
+        </div>
+
+      </div>
+
+      <div class="services-action">
+
+        <a href="mailto:nazmulalam203@gmail.com" class="consult-btn">
+          Book a consultation →
+        </a>
+
+        <div class="service-social">
+
+          <div class="service-arrow">
+            <img src="./images/arrow2.png" alt="Arrow">
+          </div>
+
+          <div class="follow-text">
+            Follow me on
+          </div>
+
+          <div class="service-icons">
+
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <img src="./images/instra.png" alt="Instagram">
+            </a>
+
+            <a href="#" class="social-icon" aria-label="Twitter">
+              <img src="./images/twitter.png" alt="Twitter">
+            </a>
+
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <img src="./images/in.png" alt="LinkedIn">
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="services-card-grid">
+
+      <article class="service-box">
+
+        <div>
+          <div class="service-icon-wrap icon-style-1">
+            <div class="service-icon icon-1">
+              <img src="./images/world.png" alt="Advanced Automation Icon">
+            </div>
+          </div>
+
+          <h3>Advanced Automation &<br>System Integration</h3>
+        </div>
+
+        <a href="#" class="know-more">Know More →</a>
+
+      </article>
+
+      <article class="service-box">
+
+        <div>
+          <div class="service-icon-wrap icon-style-2">
+            <div class="service-icon icon-2">
+              <img src="./images/icon w.png" alt="AI Compliance Icon">
+            </div>
+          </div>
+
+          <h3>Transparent & Compliant<br>AI Systems</h3>
+        </div>
+
+        <a href="#" class="know-more">Know More →</a>
+
+      </article>
+
+      <article class="service-box">
+
+        <div>
+          <div class="service-icon-wrap icon-style-3">
+            <div class="service-icon icon-3">
+              <img src="./images/icon e.png" alt="AI Agent Icon">
+            </div>
+          </div>
+
+          <h3>Custom AI Agents &<br>Multi-Agent Architectures</h3>
+        </div>
+
+        <a href="#" class="know-more">Know More →</a>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<script>
+document.querySelectorAll(".service-box").forEach(function(card){
+  function finishAnim(){
+    card.style.opacity = "1";
+    card.style.animation = "none";
+    card.style.transform = "";
+    card.classList.add("animation-done");
+  }
+
+  card.addEventListener("animationend", finishAnim);
+
+  /* Safety fallback */
+  setTimeout(finishAnim, 1400);
+});
+</script>
+
+<footer class="footer-section">
+
+  <div class="footer-container">
+
+    <div class="footer-card">
+
+      <h3>Social Media</h3>
+
+      <div class="footer-social">
+
+        <a href="#">
+          <img src="./images/instra.png" alt="">
+        </a>
+
+        <a href="#">
+          <img src="./images/facebook.png" alt="">
+        </a>
+
+        <a href="#">
+          <img src="./images/in.png" alt="">
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-card footer-menu">
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+      </div>
+
+      <div class="footer-links">
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Pricing</a>
+      </div>
+
+    </div>
+
+    <div class="footer-card footer-copyright">
+
+      <h3>
+        © 2026<br>
+        Nazmul Alam
+      </h3>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<script>
+/* Scroll reveal safety for pages that use these classes */
+(function(){
+  const selectors = ".animate-left,.animate-right,.animate-up,.animate-down,.reveal-left,.reveal-right,.reveal-up,.reveal-down,.blog-from-left,.blog-from-right,.blog-from-top,.blog-from-bottom";
+  const items = document.querySelectorAll(selectors);
+  if(!items.length) return;
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("show","animate-visible");
+        obs.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.16, rootMargin:"0px 0px -8% 0px"});
+  items.forEach(i=>obs.observe(i));
+})();
+
+/* Service card hover enable safety */
+document.querySelectorAll(".service-box").forEach(card=>{
+  card.classList.add("animation-done");
+  card.addEventListener("animationend",()=>card.classList.add("animation-done"));
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Nazmul Alam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Playball&display=swap" rel="stylesheet">
+<style>
+/* HEADER */
+
+.site-header{
+    width:100%;
+    height:72px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 40px;
+
+    background:linear-gradient(
+    90deg,
+    #5878ff 0%,
+    #6b6ffb 50%,
+    #7d5df7 100%
+    );
+
+    position:sticky;
+    top:0;
+    z-index:9999;
+}
+
+/* LOGO */
+
+.header-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.header-logo img{
+    width:42px;
+    height:42px;
+    object-fit:contain;
+}
+
+.header-logo span{
+    color:#111;
+    font-size:28px;
+    font-weight:800;
+}
+
+/* MENU */
+
+.header-menu{
+    display:flex;
+    align-items:center;
+    gap:42px;
+}
+
+.header-menu a{
+    text-decoration:none;
+    color:rgba(0,0,0,0.65);
+
+    font-size:16px;
+    font-weight:500;
+
+    transition:.3s;
+}
+
+.header-menu a:hover{
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+/* BUTTON */
+
+.call-btn{
+    background:#000;
+
+    color:#fff;
+    text-decoration:none;
+
+    padding:14px 30px;
+
+    border-radius:50px;
+
+    font-size:15px;
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.call-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+/* DEMO CONTENT */
+
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.site-header{
+    flex-wrap:wrap;
+    height:auto;
+    padding:18px;
+    gap:20px;
+}
+
+.header-logo{
+    width:100%;
+    justify-content:center;
+}
+
+.header-menu{
+    width:100%;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+.call-btn{
+    margin:auto;
+}
+
+.header-logo span{
+    font-size:24px;
+}
+
+}
+
+@media(max-width:600px){
+
+.header-menu{
+    gap:12px;
+}
+
+.header-menu a{
+    font-size:14px;
+}
+
+.call-btn{
+    padding:12px 22px;
+}
+
+.header-logo img{
+    width:34px;
+    height:34px;
+}
+
+.header-logo span{
+    font-size:20px;
+}
+
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Inter Tight",sans-serif;
+  background:#401669;
+  color:#ffffff;
+  overflow-x:hidden;
+  
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.about-page{
+  width:100%;
+  background:#050522;
+  
+}
+
+/* ================= PAGE 1 ================= */
+
+.about-hero{
+  width:min(1120px,100%);
+  min-height:760px;
+  margin:0px auto;
+  padding:0 30px 70px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  position:relative;
+  border-bottom:1px solid rgba(0,0,0,0.2);
+  border: 1px solid rgba(255, 255, 255, 0);
+  background: linear-gradient(135deg, #152d1036 0%, #39383859 100%);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.529);
+  
+}
+
+.about-title{
+  font-size:clamp(72px,10vw,112px);
+  line-height:0.78;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:-0.04em;
+  animation:fadeLeft .8s ease forwards;
+  margin-top:40px;
+}
+
+.about-name{
+  font-family:"Playball",cursive;
+  font-size:clamp(44px,6vw,64px);
+  line-height:0.9;
+  font-weight:500;
+  margin-top:6px;
+  animation:fadeRight .8s ease forwards .15s;
+  opacity:0;
+}
+
+.about-intro{
+  max-width:860px;
+  margin-top:36px;
+  font-size:30px;
+  line-height:1.35;
+  font-weight:400;
+  animation:fadeUp .8s ease forwards .28s;
+  opacity:0;
+}
+
+.about-intro strong{
+  font-weight:800;
+}
+
+.about-btn{
+  width:160px;
+  height:54px;
+  margin-top:30px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:#ffffff;
+  color:#000000;
+  border-radius:4px;
+  font-size:18px;
+  font-weight:700;
+  box-shadow:10px 12px 18px rgba(0,0,0,0.45);
+  transition:.3s ease;
+  animation:fadeUp .8s ease forwards .4s;
+  opacity:0;
+}
+
+.about-btn:hover{
+  transform:translateY(-6px);
+}
+
+.about-note{
+  margin-top:30px;
+  font-size:22px;
+  font-weight:500;
+  animation:fadeUp .8s ease forwards .5s;
+  opacity:0;
+}
+
+.about-social{
+  margin-top:2px;
+  display:flex;
+  align-items:center;
+  justify-content:right;
+  gap:12px;
+  animation:fadeUp .8s ease forwards .65s;
+  opacity:0;
+}
+
+.arrow-img{
+   width:200px;
+  height:200px;
+  object-fit:contain;
+
+  filter: brightness(0) invert(1);
+  max-width: ;
+}
+
+.follow-text{
+  font-size:22px;
+  font-weight:700;
+  margin-top:10px;
+}
+
+.social-icons{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.social-icons a{
+    width:60px;
+  height:60px;
+  border-radius:50%;
+  
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  transition:0.3s ease;
+  margin-top:0px;
+}
+.social-icons a:hover{
+  transform:translateY(-5px);
+  
+}
+
+.social-icons img{
+  width:80px;
+  height:80px;
+  object-fit:contain;
+}
+
+/* ================= PAGE 2 ================= */
+
+.about-info-section{
+  width:min(1120px,100%);
+  min-height:700px;
+  margin:0 auto;
+  padding:45px 30px 70px;
+  border-bottom:1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-info-title-row{
+  display:flex;
+  align-items:flex-start;
+  gap:70px;
+  margin-bottom:70px;
+}
+
+.about-info-title{
+  font-size:clamp(48px,6vw,62px);
+  line-height:0.9;
+  font-weight:800;
+  letter-spacing:-0.04em;
+}
+
+.about-tagline{
+  font-family:"Playball",cursive;
+  font-size:clamp(30px,4vw,38px);
+  margin-top:22px;
+}
+
+.info-layout{
+  position:relative;
+  width:100%;
+  min-height:390px;
+}
+
+.info-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0 360px;
+}
+
+.info-card{
+  min-height:172px;
+  padding:18px 16px;
+  background:linear-gradient(180deg,#e8e8e8,#fff);
+  border:1px solid rgba(0,0,0,0.15);
+  box-shadow:0 0 20px rgba(255, 255, 255, 0.42);
+  color:#000;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.info-card:nth-child(2),
+.info-card:nth-child(4){
+  text-align:right;
+  align-items:flex-end;
+}
+.info-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 0 28px rgba(255, 255, 255, 0.6);
+}
+
+
+
+.info-label{
+  font-size:14px;
+  font-weight:500;
+}
+
+.info-value{
+  font-size:28px;
+  line-height:1.05;
+  font-weight:400;
+}
+
+.profile-center{
+  position:absolute;
+  left:50%;
+  top:-35px;
+  transform:translateX(-50%);
+  width:330px;
+  height:420px;
+  border-radius:190px;
+  overflow:hidden;
+  z-index:5;
+}
+
+.profile-center img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+  display:block;
+  border:4px solid #fff;
+  border-radius:50%;
+}
+
+.hire-btn-wrap{
+  display:flex;
+  justify-content:center;
+  margin-top:22px;
+}
+
+.hire-btn{
+  min-width:190px;
+  height:54px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:#ffffff;
+  color:#000000;
+  border-radius:4px;
+  font-size:15px;
+  font-weight:700;
+  box-shadow:10px 12px 15px rgba(0,0,0,0.45);
+  transition:.3s ease;
+}
+
+.hire-btn:hover{
+  transform:translateY(-6px);
+}
+
+/* ================= PAGE 3 ================= */
+
+.skills-section{
+  width:min(1120px,100%);
+  min-height:590px;
+  margin:0 auto;
+  padding:40px 30px 70px;
+  text-align:center;
+  border-bottom:1px solid rgba(255, 255, 255, 0.66);
+}
+
+.skills-title{
+  font-size:clamp(46px,6vw,60px);
+  line-height:0.88;
+  font-weight:800;
+  letter-spacing:-0.04em;
+  margin-bottom:42px;
+}
+
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.skill-card{
+  min-height:290px;
+  border:8px solid #aaa;
+  border-radius:12px;
+  padding:18px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+}
+
+.skill-card.green-border{border-color:#a8a8a8;}
+.skill-card.orange-border{border-color:#cec596;}
+.skill-card.blue-border{border-color:#9ba4dd;}
+
+.skill-top{
+  width:210px;
+  min-height:105px;
+  border-radius:18px;
+  padding:22px 18px;
+  margin:0 auto 25px;
+  box-shadow:12px 14px 20px rgba(0,0,0,0.35);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  text-align:left;
+}
+
+.skill-top.green{background:linear-gradient(135deg,#51cf39,#68c414);}
+.skill-top.orange{background:linear-gradient(135deg,#fd6f04,#b97900);}
+.skill-top.blue{background:linear-gradient(135deg,#0012fa,#5552c8);color:#fff;}
+
+.skill-icon{
+  width:80px;
+  height:80px;
+  flex:0 0 34px;
+}
+
+.skill-icon img{
+  width:60px;
+  height:60px;
+  object-fit:contain;
+}
+
+.skill-top h3{
+  font-size:16px;
+  line-height:1.1;
+  font-weight:500;
+}
+
+.skill-list{
+  list-style:none;
+  text-align:left;
+  width:130px;
+  margin:0 auto;
+}
+
+.skill-list li{
+  font-size:18px;
+  line-height:1.7;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.skill-list img{
+  width:12px;
+  height:12px;
+  object-fit:contain;
+}
+
+.idea-box{
+  margin-top:42px;
+}
+
+.idea-box h2{
+  font-size:30px;
+  line-height:1.1;
+  font-weight:800;
+}
+
+.services-btn{
+  margin-top:30px;
+  min-width:180px;
+  height:50px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:#ffffff;
+  color:#000000;
+  border-radius:40px;
+  font-size:14px;
+  font-weight:700;
+  box-shadow:9px 10px 12px rgba(0,0,0,0.45);
+}
+
+/* ================= PAGE 4 ================= */
+
+.career-section{
+  width:min(1120px,100%);
+  min-height:640px;
+  margin:0 auto;
+  padding:40px 30px 80px;
+  position:relative;
+  
+  
+}
+
+.career-title{
+  text-align:center;
+  font-size:clamp(38px,5vw,48px);
+  line-height:0.95;
+  font-weight:800;
+  margin-bottom:50px;
+
+  
+}
+
+.career-layout{
+  position:relative;
+  min-height:200px;
+  
+}
+
+.career-card{
+  width:280px;
+  min-height:200px;
+  background:#e9e9e9;
+  border-radius:20px;
+  box-shadow:0 0 28px rgba(0,0,0,0.45);
+  padding:18px;
+  position:absolute;
+  
+}
+
+.career-card h3{
+  font-size:18px;
+  line-height:1.08;
+  font-weight:800;
+  color:#000;
+}
+
+.career-card p{
+  margin-top:45px;
+  font-size:12px;
+  line-height:1.5;
+  color:#161616;
+}
+
+.career-card.card-1{
+  left:0;
+  top:0;
+}
+
+.career-card.card-2{
+  left:300px;
+  top:70px;
+}
+
+.career-card.card-3{
+  right:120px;
+  top:130px;
+}
+
+.career-arrow{
+  position:absolute;
+  right:0;
+  top:105px;
+  width:140px;
+  height:120px;
+}
+
+.career-arrow img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.number-row{
+  margin-top:135px;
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+  padding:0 40px;
+}
+
+.number-card{
+  text-align:center;
+}
+
+.number-circle{
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:58px;
+  font-weight:800;
+  color:#000;
+  box-shadow:8px 8px 18px rgba(0,0,0,0.35);
+}
+
+.circle-blue{
+  background:radial-gradient(circle at 30% 30%,#f4f4f4 35%,#2e5cff 75%,#0034c7 100%);
+}
+
+.circle-green{
+  background:radial-gradient(circle at 30% 30%,#f4f4f4 35%,#6ecb5e 75%,#3ea63c 100%);
+}
+
+.circle-orange{
+  background:radial-gradient(circle at 30% 30%,#f4f4f4 35%,#cf8b18 75%,#9d6400 100%);
+}
+
+.number-label{
+  font-size:14px;
+  margin-bottom:4px;
+  text-align:left;
+}
+
+/* ================= ANIMATION ================= */
+
+.reveal-left{animation:fadeLeft .8s ease forwards;}
+.reveal-right{animation:fadeRight .8s ease forwards;}
+.reveal-up{animation:fadeUp .8s ease forwards;}
+
+@keyframes fadeLeft{
+  from{opacity:0;transform:translateX(-70px);}
+  to{opacity:1;transform:translateX(0);}
+}
+
+@keyframes fadeRight{
+  from{opacity:0;transform:translateX(70px);}
+  to{opacity:1;transform:translateX(0);}
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(60px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+  .about-hero{
+    min-height:auto;
+    padding:50px 24px;
+  }
+
+  .about-social{
+    justify-content:flex-start;
+    flex-wrap:wrap;
+  }
+
+  .about-info-title-row{
+    flex-direction:column;
+    gap:12px;
+    text-align:center;
+  }
+
+  .info-layout{
+    min-height:auto;
+  }
+
+  .profile-center{
+    position:relative;
+    top:auto;
+    left:auto;
+    transform:none;
+    margin:0 auto 25px;
+    width:260px;
+    height:340px;
+  }
+
+  .info-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .info-card:nth-child(2),
+  .info-card:nth-child(4){
+    text-align:left;
+    align-items:flex-start;
+  }
+
+  .skills-grid{
+    grid-template-columns:1fr;
+  }
+
+  .career-layout{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+  }
+
+  .career-card{
+    position:relative;
+    width:100%;
+    left:auto!important;
+    right:auto!important;
+    top:auto!important;
+  }
+
+  .career-arrow{
+    display:none;
+  }
+
+  .number-row{
+    margin-top:55px;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .number-label{
+    text-align:center;
+  }
+}
+
+@media(max-width:520px){
+
+  .about-title{
+    font-size:68px;
+  }
+
+  .about-name{
+    font-size:48px;
+  }
+
+  .about-social{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .about-info-title{
+    font-size:46px;
+  }
+
+  .info-value{
+    font-size:24px;
+  }
+
+  .skill-top{
+    width:100%;
+  }
+}
+
+/* ================= FINAL FIXES ADDED ================= */
+
+/* All buttons radius + working hover */
+.about-btn,
+.hire-btn,
+.services-btn{
+  border-radius:40px !important;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease !important;
+  animation-fill-mode:forwards;
+}
+
+.about-btn:hover,
+.hire-btn:hover,
+.services-btn:hover{
+  transform:translateY(-7px) !important;
+  background:#7C3AED !important;
+  color:#fff !important;
+  box-shadow:0 20px 35px rgba(255,255,255,0.20) !important;
+}
+
+/* Scroll animation: hidden first, visible when JS adds .show */
+.reveal-left,
+.reveal-right,
+.reveal-up,
+.reveal-down{
+  opacity:0;
+  animation:none !important;
+  transition:
+    opacity 0.85s ease,
+    transform 0.85s ease;
+  will-change:opacity, transform;
+}
+
+.reveal-left{transform:translateX(-70px);}
+.reveal-right{transform:translateX(70px);}
+.reveal-up{transform:translateY(60px);}
+.reveal-down{transform:translateY(-60px);}
+
+.reveal-left.show,
+.reveal-right.show,
+.reveal-up.show,
+.reveal-down.show{
+  opacity:1;
+  transform:translate(0,0);
+}
+
+/* Career section spacing + FD circle directly below every card */
+.career-layout{
+  position:relative !important;
+  min-height:auto !important;
+  display:grid !important;
+  grid-template-columns:repeat(3,1fr);
+  gap:38px;
+  align-items:start;
+}
+
+.career-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:26px;
+}
+
+.career-card{
+  position:relative !important;
+  left:auto !important;
+  right:auto !important;
+  top:auto !important;
+  width:100% !important;
+  max-width:280px;
+  min-height:200px;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.career-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 35px rgba(255,255,255,0.34);
+}
+
+.career-arrow{
+  position:relative !important;
+  right:auto !important;
+  top:auto !important;
+  width:130px;
+  height:100px;
+  margin-top:-10px;
+  margin-bottom:0px;
+}
+
+.career-arrow img{
+  filter:brightness(0) invert(1);
+}
+
+.number-row{
+  display:none !important;
+}
+
+.number-card{
+  width:200px;
+  text-align:center;
+}
+
+.number-label{
+  text-align:center !important;
+  margin-bottom:8px;
+}
+
+@media(max-width:900px){
+  .career-layout{
+    grid-template-columns:1fr;
+    gap:34px;
+  }
+
+  .career-card{
+    max-width:100%;
+  }
+
+  .career-arrow{
+    display:none;
+  }
+}
+
+
+/* ================= FINAL CORRECTION: NO VIBRATION + CAREER ALIGNMENT ================= */
+
+/* Stop button vibration: no vertical movement on hover, only color/shadow change */
+.about-btn,
+.hire-btn,
+.services-btn{
+  border-radius:40px !important;
+  transition:
+    background 0.28s ease,
+    color 0.28s ease,
+    box-shadow 0.28s ease !important;
+  transform:none !important;
+}
+
+.about-btn:hover,
+.hire-btn:hover,
+.services-btn:hover{
+  transform:none !important;
+  background:#7C3AED !important;
+  color:#fff !important;
+  box-shadow:0 18px 32px rgba(255,255,255,0.22) !important;
+}
+
+/* Make career cards equal and circles aligned under each card */
+.career-layout{
+  display:grid !important;
+  grid-template-columns:repeat(3,1fr) !important;
+  gap:34px !important;
+  align-items:start !important;
+}
+
+.career-item{
+  display:grid !important;
+  grid-template-rows:220px auto !important;
+  justify-items:center !important;
+  align-items:start !important;
+  gap:28px !important;
+}
+
+.career-card{
+  width:100% !important;
+  max-width:280px !important;
+  min-height:200px !important;
+  height:200px !important;
+  position:relative !important;
+  left:auto !important;
+  right:auto !important;
+  top:auto !important;
+}
+
+/* Arrow beside third card title, not below card */
+.career-card-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.career-card-top h3{
+  flex:1;
+}
+
+.career-card-with-arrow .career-arrow{
+  position:relative !important;
+  right:auto !important;
+  top:auto !important;
+  width:74px !important;
+  height:62px !important;
+  margin:0 !important;
+  flex:0 0 74px;
+  display:flex !important;
+  align-items:center;
+  justify-content:center;
+}
+
+.career-card-with-arrow .career-arrow img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  filter:brightness(0) invert(1);
+}
+
+/* Circle stays directly below every card and all are same baseline */
+.number-card{
+  width:200px !important;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  text-align:center;
+}
+
+.number-label{
+  width:100%;
+  text-align:center !important;
+  margin-bottom:8px !important;
+}
+
+@media(max-width:900px){
+  .career-layout{
+    grid-template-columns:1fr !important;
+  }
+
+  .career-item{
+    grid-template-rows:auto auto !important;
+  }
+
+  .career-card{
+    max-width:100% !important;
+    height:auto !important;
+    min-height:200px !important;
+  }
+
+  .career-card-with-arrow .career-arrow{
+    display:flex !important;
+  }
+}
+
+
+.footer-section{
+  width:100%;
+}
+
+.footer-container{
+  max-width:1120px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 2fr 1fr;
+  gap:25px;
+}
+
+.footer-card{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:24px;
+  padding:28px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+.footer-card h3{
+  font-size:24px;
+  font-weight:600;
+  color:#fff;
+  margin-bottom:24px;
+}
+
+/* Social */
+
+.footer-social{
+  display:flex;
+  gap:12px;
+}
+
+.footer-social a{
+  width:52px;
+  height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,0.15);
+  transition:.3s;
+}
+
+.footer-social a:hover{
+  transform:translateY(-5px);
+}
+
+.footer-social img{
+  width:30px;
+  height:30px;
+  object-fit:contain;
+}
+
+/* Menu */
+
+.footer-menu{
+  display:flex;
+  justify-content:space-between;
+}
+
+.footer-links{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.footer-links a{
+  color:#d7d7d7;
+  font-size:15px;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.footer-links a:hover{
+  color:#fff;
+}
+
+/* Copyright */
+
+.footer-copyright{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.footer-copyright h3{
+  margin:0;
+  line-height:1.4;
+}
+
+@media(max-width:768px){
+
+  .footer-container{
+    grid-template-columns:1fr;
+  }
+
+  .footer-menu{
+    flex-direction:column;
+    gap:25px;
+  }
+
+}
+
+/* ================= FINAL GITHUB PACKAGE GLOBAL FIXES ================= */
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;overflow-x:hidden;}
+section{scroll-margin-top:95px;}
+@media(max-width:900px){section{scroll-margin-top:165px;}}
+
+/* Force all website buttons to 40px radius */
+a[class*="btn"],
+button,
+.submit-btn,
+.call-btn,
+.read-more,
+.know-more,
+.consult-btn,
+.about-btn,
+.hire-btn,
+.services-btn,
+.contact-btn,
+.hero-btn,
+.cta-btn{
+  border-radius:40px !important;
+}
+
+/* Safe button hover: no vibration */
+a[class*="btn"]:hover,
+button:hover,
+.submit-btn:hover,
+.call-btn:hover,
+.read-more:hover,
+.know-more:hover,
+.consult-btn:hover,
+.about-btn:hover,
+.hire-btn:hover,
+.services-btn:hover,
+.contact-btn:hover,
+.hero-btn:hover,
+.cta-btn:hover{
+  transition:background .3s ease,color .3s ease,box-shadow .3s ease,transform .3s ease;
+}
+
+/* Footer should attach naturally after page content */
+.footer-section{
+  background:#050522;
+}
+
+/* Blog details standalone */
+.blog-page{
+  display:block !important;
+}
+.main-content.hidden{
+  display:block !important;
+}
+
+</style>
+</head>
+<body>
+<header class="site-header">
+
+    <div class="header-logo">
+        <img src="./images/logo.png" alt="Logo">
+        <span>Nazmul</span>
+    </div>
+
+    <nav class="header-menu">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="tel:+8801922615513" class="call-btn">
+        Call Me
+    </a>
+
+</header>
+
+<main class="about-page">
+
+  <!-- PAGE 1 -->
+  <section class="about-hero">
+
+    <h1 class="about-title">About</h1>
+    <div class="about-name">Alam</div>
+
+    <p class="about-intro">
+      Create <strong>optimized n8n automations and AI agents</strong> that bring all your systems together and handle the work you shouldn’t be doing manually.
+    </p>
+
+    <a href="#about-info" class="about-btn">Know More</a>
+
+    <p class="about-note">
+      *Helping businesses automate operations with AI-powered workflows.
+    </p>
+
+    <div class="about-social">
+
+      <img src="./images/arrow2.png" alt="Arrow" class="arrow-img">
+
+      <div class="follow-text">Follow me on</div>
+
+      <div class="social-icons">
+        <a href="#"><img src="./images/instra.png" alt="Instagram"></a>
+        <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="./images/in.png" alt="LinkedIn"></a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PAGE 2 -->
+  <section id="about-info" class="about-info-section">
+
+    <div class="about-info-title-row">
+      <h2 class="about-info-title">Here’s a<br>bit about me..</h2>
+      <div class="about-tagline">Work smart not harder</div>
+    </div>
+
+    <div class="info-layout">
+
+      <div class="profile-center">
+        <img src="./images/me2.png" alt="Nazmul Alam">
+      </div>
+
+      <div class="info-grid">
+
+        <div class="info-card reveal-left">
+          <span class="info-label">Speciality:</span>
+          <span class="info-value">Fiverr Pro<br>Automation &<br>Expert.</span>
+        </div>
+
+        <div class="info-card reveal-right">
+          <span class="info-label">Location:</span>
+          <span class="info-value">Dhaka,<br>Bangladesh</span>
+        </div>
+
+        <div class="info-card reveal-left">
+          <span class="info-label">Project Completed:</span>
+          <span class="info-value">49 + Completed</span>
+        </div>
+
+        <div class="info-card reveal-right">
+          <span class="info-label">Experience:</span>
+          <span class="info-value">3 Years</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="hire-btn-wrap">
+      <a href="#" class="hire-btn">Hire me on Fiverr</a>
+    </div>
+
+  </section>
+
+  <!-- PAGE 3 -->
+  <section class="skills-section">
+
+    <h2 class="skills-title">What I<br>bring to the table</h2>
+
+    <div class="skills-grid">
+
+      <article class="skill-card green-border reveal-left">
+        <div>
+          <div class="skill-top green">
+            <div class="skill-icon">
+              <img src="./images/world.png" alt="Automation Icon">
+            </div>
+            <h3>Automation<br>Integration Points</h3>
+          </div>
+
+          <ul class="skill-list">
+            <li><img src="./images/list-icon.png" alt="">Website</li>
+            <li><img src="./images/list-icon.png" alt="">Google Sheets</li>
+            <li><img src="./images/list-icon.png" alt="">Airtable</li>
+            <li><img src="./images/list-icon.png" alt="">Salesforce</li>
+            <li><img src="./images/list-icon.png" alt="">Mailchimp</li>
+            <li><img src="./images/list-icon.png" alt="">TypeForm</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="skill-card orange-border reveal-up">
+        <div>
+          <div class="skill-top orange">
+            <div class="skill-icon">
+              <img src="./images/icon e.png" alt="Programming Icon">
+            </div>
+            <h3>Programming<br>Language</h3>
+          </div>
+
+          <ul class="skill-list">
+            <li><img src="./images/list-icon.png" alt="">HTML</li>
+            <li><img src="./images/list-icon.png" alt="">CSS</li>
+            <li><img src="./images/list-icon.png" alt="">JAVA</li>
+            <li><img src="./images/list-icon.png" alt="">JS</li>
+            <li><img src="./images/list-icon.png" alt="">C#</li>
+            <li><img src="./images/list-icon.png" alt="">Python</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="skill-card blue-border reveal-right">
+        <div>
+          <div class="skill-top blue">
+            <div class="skill-icon">
+              <img src="./images/icon w.png." alt="Design Icon">
+            </div>
+            <h3>Design Expertise</h3>
+          </div>
+
+          <ul class="skill-list">
+            <li><img src="./images/list-icon.png" alt="">Photoshop</li>
+            <li><img src="./images/list-icon.png" alt="">Canva</li>
+            <li><img src="./images/list-icon.png" alt="">WordPress</li>
+            <li><img src="./images/list-icon.png" alt="">Figma</li>
+            <li><img src="./images/list-icon.png" alt="">Premier Pro</li>
+            <li><img src="./images/list-icon.png" alt="">After Effect</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="idea-box">
+      <h2>Have an idea?<br>Let’s bring it to Digital life</h2>
+      <a href="#" class="services-btn">See All Services</a>
+    </div>
+
+  </section>
+
+  <!-- PAGE 4 -->
+  <section class="career-section">
+    <div class="career-arrow">
+              <img src="./images/arrow2.png" alt="Career Arrow">
+            </div>
+
+    <h2 class="career-title reveal-down">The path that,<br>I have taken in my career</h2>
+
+      
+
+    <div class="career-layout">
+
+      <div class="career-item reveal-left">
+        <article class="career-card">
+          <h3>Fiverr Pro AI<br>Automator</h3>
+          <p>25th October 2023,<br>Continue serving</p>
+        </article>
+
+        <div class="number-card">
+          <div class="number-label">Project Completed</div>
+          <div class="number-circle circle-blue">
+            <span class="counter" data-target="433">0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="career-item reveal-up">
+        <article class="career-card">
+          <h3>Social media, AI<br>Automator(Remote job)</h3>
+          <p>11th May 2022,<br>Montrims Ltd. Canada</p>
+        </article>
+
+        <div class="number-card">
+          <div class="number-label">Project Ongoing</div>
+          <div class="number-circle circle-green">
+            <span class="counter" data-target="7">0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="career-item reveal-right">
+        <article class="career-card career-card-with-arrow">
+
+          <div class="career-card-top">
+            <h3>Fiverr High CTR<br>Thumbnail Designer</h3>
+
+          
+          </div>
+
+          <p>5th May 2021, &nbsp; Continue serving</p>
+        </article>
+
+        <div class="number-card">
+          <div class="number-label">Satisfied Review</div>
+          <div class="number-circle circle-orange">
+            <span class="counter" data-target="189">0</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+
+<script>
+/* Keep the same scroll position after refresh */
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+window.addEventListener("beforeunload", () => {
+  sessionStorage.setItem("aboutScrollY", String(window.scrollY));
+});
+
+window.addEventListener("load", () => {
+  const savedY = sessionStorage.getItem("aboutScrollY");
+
+  if (savedY !== null) {
+    setTimeout(() => {
+      window.scrollTo(0, Number(savedY));
+    }, 0);
+  }
+});
+
+/* Scroll-trigger animation for all sections */
+const animatedItems = document.querySelectorAll(".reveal-left, .reveal-right, .reveal-up, .reveal-down");
+
+const animationObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+},{
+  threshold:0.18,
+  rootMargin:"0px 0px -8% 0px"
+});
+
+animatedItems.forEach(item => {
+  animationObserver.observe(item);
+});
+
+/* Counter animation */
+const counters = document.querySelectorAll(".counter");
+const startedCounters = new WeakSet();
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting && !startedCounters.has(entry.target)){
+      const counter = entry.target;
+      startedCounters.add(counter);
+
+      const target = Number(counter.dataset.target);
+      const duration = 1300;
+      const startTime = performance.now();
+
+      function updateCounter(now){
+        const progress = Math.min((now - startTime) / duration, 1);
+        counter.textContent = Math.floor(progress * target);
+
+        if(progress < 1){
+          requestAnimationFrame(updateCounter);
+        }else{
+          counter.textContent = target;
+        }
+      }
+
+      requestAnimationFrame(updateCounter);
+    }
+  });
+},{threshold:0.55});
+
+counters.forEach(counter => {
+  counterObserver.observe(counter);
+});
+</script>
+
+<footer class="footer-section">
+
+  <div class="footer-container">
+
+    <div class="footer-card">
+
+      <h3>Social Media</h3>
+
+      <div class="footer-social">
+
+        <a href="#">
+          <img src="./images/instra.png" alt="">
+        </a>
+
+        <a href="#">
+          <img src="./images/facebook.png" alt="">
+        </a>
+
+        <a href="#">
+          <img src="./images/in.png" alt="">
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-card footer-menu">
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+      </div>
+
+      <div class="footer-links">
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Pricing</a>
+      </div>
+
+    </div>
+
+    <div class="footer-card footer-copyright">
+
+      <h3>
+        © 2026<br>
+        Nazmul Alam
+      </h3>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<script>
+/* Scroll reveal safety for pages that use these classes */
+(function(){
+  const selectors = ".animate-left,.animate-right,.animate-up,.animate-down,.reveal-left,.reveal-right,.reveal-up,.reveal-down,.blog-from-left,.blog-from-right,.blog-from-top,.blog-from-bottom";
+  const items = document.querySelectorAll(selectors);
+  if(!items.length) return;
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("show","animate-visible");
+        obs.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.16, rootMargin:"0px 0px -8% 0px"});
+  items.forEach(i=>obs.observe(i));
+})();
+
+/* Service card hover enable safety */
+document.querySelectorAll(".service-box").forEach(card=>{
+  card.classList.add("animation-done");
+  card.addEventListener("animationend",()=>card.classList.add("animation-done"));
+});
+</script>
+</body>
+</html>
