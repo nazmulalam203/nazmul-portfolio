@@ -1,3 +1,4 @@
+
 <!DOCTYPE html> <!-- Tells the browser this file uses modern HTML5 -->
 <html lang="en"> <!-- Starts the HTML document and sets the page language to English -->
 <head> <!-- Starts the head area where settings, title, fonts, and CSS are placed -->
@@ -1511,7 +1512,7 @@ section{ /* Style block starts for this selector */
 @media(max-width:640px){ /* Mobile screens */
 
   .site-header{ /* Header */
-    padding:12px 16px; /* Better mobile header spacing */
+    padding:12px 16px !important; /* Better mobile header spacing */
   } /* End mobile header */
 
   .header-logo img{ /* Logo icon */
@@ -2021,6 +2022,71 @@ section{ /* Style block starts for this selector */
 
 }
 
+/* =========================================================
+   RESPONSIVE HAMBURGER MOBILE MENU FIX
+   Ensures the navigation is opaque, covers the full screen,
+   and prevents overlaps with the background hero elements.
+========================================================= */
+@media(max-width:900px){
+
+  /* Keeps the Logo and Hamburger button interactive and stacked above the fullscreen overlay */
+  .header-logo, 
+  .menu-toggle {
+    position: relative !important;
+    z-index: 10001 !important;
+  }
+
+  /* Clear glass-blurred background/borders from sticky header bar only when menu is active */
+  .site-header.menu-active {
+    background: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Hides horizontal scrolling and prevents background site movement when menu is open */
+  body.no-scroll {
+    overflow: hidden !important;
+  }
+
+  /* Redefines the hidden mobile menu container */
+  .header-menu {
+    display: none;
+  }
+
+  /* Solid full-screen gray overlay when navigation menu is open on mobile */
+  .header-menu.is-open {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: #14141e !important; /* Solid elegant slate gray style color */
+    z-index: 10000 !important; /* Positions behind the logo/hamburger, but in front of content */
+    gap: 28px !important;
+    padding: 110px 24px 40px !important;
+    box-sizing: border-box !important;
+    overflow-y: auto !important; /* Gracefully allows navigation to scroll if list is tall */
+  }
+
+  /* Make menu links look prominent and clear on full-screen container */
+  .header-menu.is-open a {
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    padding: 6px 0 !important;
+  }
+
+  .header-menu.is-open a:hover {
+    color: var(--purple) !important;
+  }
+}
+
 </style> <!-- Ends internal CSS -->
 </head> <!-- Ends head area -->
 <body> <!-- Starts visible website body -->
@@ -2253,11 +2319,19 @@ section{ /* Style block starts for this selector */
 <script> /* Starts JavaScript */
 const menuToggle = document.querySelector(".menu-toggle"); /* Finds the mobile menu button */
 const headerMenu = document.querySelector(".header-menu"); /* Finds the header navigation menu */
+const siteHeader = document.querySelector(".site-header"); /* Finds the main header element */
+
 if(menuToggle && headerMenu){ /* Checks that both mobile button and menu exist */
   menuToggle.addEventListener("click", () => { /* Runs code when menu button is clicked */
     const isOpen = headerMenu.classList.toggle("is-open"); /* Opens or closes the mobile menu */
     menuToggle.setAttribute("aria-expanded", String(isOpen)); /* Updates accessibility state */
     menuToggle.textContent = isOpen ? "×" : "☰"; /* Changes icon between close and menu */
+    
+    // Toggles the mobile layout helper classes
+    if(siteHeader) {
+      siteHeader.classList.toggle("menu-active", isOpen); /* Removes borders/glass backdrop so menu renders cleanly */
+    }
+    document.body.classList.toggle("no-scroll", isOpen); /* Prevents the background site from scrolling when menu is active */
   }); /* Ends click event */
 } /* Ends mobile menu check */
 
@@ -2269,6 +2343,8 @@ document.querySelectorAll(".main-content a[href^='#']").forEach(link => { /* Sel
       target.scrollIntoView({behavior:"smooth",block:"start"}); /* Smoothly scrolls to the target section */
       if(headerMenu){headerMenu.classList.remove("is-open");} /* Closes mobile menu after clicking a link */
       if(menuToggle){menuToggle.textContent="☰";menuToggle.setAttribute("aria-expanded","false");} /* Resets mobile button icon */
+      if(siteHeader){siteHeader.classList.remove("menu-active");} /* Restores the glass styling to the top header */
+      document.body.classList.remove("no-scroll"); /* Restores scrolling to the main body */
     } /* Ends target check */
   }); /* Ends link click event */
 }); /* Ends internal link loop */
